@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Quick Label Filters for Trello",
+  "short_name": "Trello QLF",
+  "version": "1.0.16",
+  "description": "Add easy-access buttons to filter by label on Trello boardsi.",
+  "icons": {
+    "16": "icon-16x16.png",
+    "32": "icon-32x32.png",
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://trello.com/*"],
+      "js": ["jquery-3.3.1.slim.min.js", "quick-label-filter.js"],
+      "css": ["quick-label-filter.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
